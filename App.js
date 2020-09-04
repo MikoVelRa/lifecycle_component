@@ -1,5 +1,6 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, View, Text} from 'react-native';
+import Button from './components/Button';
 
 class App extends React.Component {
   constructor(...props) {
@@ -8,8 +9,10 @@ class App extends React.Component {
   render() {
     return (
       <SafeAreaView style={styles.background}>
-        <View style={{flexDirection: 'row'}}>
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          <Button signal={'-'} />
           <Text style={styles.text}>I'm running!!!</Text>
+          <Button signal={'+'} />
         </View>
       </SafeAreaView>
     );

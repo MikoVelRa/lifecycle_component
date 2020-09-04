@@ -8,11 +8,24 @@ class ButtonControllers extends React.Component {
 
   render() {
     return (
-      <View>
-        <Text>Hello</Text>
+      <View style={styleButton.buttoncito}>
+        <Text style={styleButton.signo}>{this.props.signal}</Text>
       </View>
     );
   }
 }
+
+const styleButton = StyleSheet.create({
+  buttoncito: {
+    backgroundColor: '#ecf0f1',
+    width: 40,
+    height: 40,
+    alignItems: 'center',
+  },
+  signo: {
+    fontSize: 30,
+    textAlign: 'center',
+  },
+});
 
 export default ButtonControllers;
